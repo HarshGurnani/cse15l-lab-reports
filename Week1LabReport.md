@@ -22,11 +22,16 @@ Visual Studio Code, also known as VS Code, is a widely used code editor. It has 
 
 <img width="1679" alt="Screen Shot 2023-01-14 at 7 19 24 PM" src="https://user-images.githubusercontent.com/68934498/212521322-78fddc16-3c5e-4f41-93fa-fe65e2f03277.png">
 
+> Downloading page for VS Code
+
+
 When you visit the site, you will see a screen like the one above. Make sure to follow the instructions for installing the correct version of VS Code, depeending on if you have a Mac or Windows; you can use the download button at the top right. For my uses, I simply had to click on "Download Mac Universal Build."
 
 After installing VS Code, you should open the app and see a screen like this: 
 
 <img width="1025" alt="Screen Shot 2023-01-12 at 10 14 56 AM" src="https://user-images.githubusercontent.com/68934498/212521436-0156f8dd-60c2-4591-badb-a377a4bc091e.png">
+
+> Launch page for VS Code 
 
 Now, you can open your files directly in the application. 
 
@@ -35,6 +40,8 @@ Now, you can open your files directly in the application.
 A prerequisite to being able to connect remotely is having your CSE 15L account. At [https://sdacs.ucsd.edu/~icc/index.php](https://sdacs.ucsd.edu/~icc/index.php), log in at the top where it says Account Lookup. 
 
 <img width="604" alt="Screen Shot 2023-01-14 at 7 32 39 PM" src="https://user-images.githubusercontent.com/68934498/212521636-3adbe9b5-8bd2-47f3-a362-effd060cea0a.png">
+
+> Log in to access CSE 15L account
 
 Under additional accounts, you should see a button with a text beginning with "cs15lwi23". That entire text is your CSE 15L account username. 
 
@@ -54,6 +61,8 @@ Following the login, your terminal will print a lot of messages, and then will s
 
 <img width="344" alt="Screen Shot 2023-01-14 at 7 38 40 PM" src="https://user-images.githubusercontent.com/68934498/212521785-634175e8-3ee5-4f93-8909-e80253664142.png">
 
+> Terminal text after connecting to remote SSH
+
 At this point, you are connected remotely and can run commands on the computer that you are connected to from your own laptop's terminal. 
 
 ## Running Commands on the Command Line
@@ -69,6 +78,8 @@ There are a lot of common commands that all programmers should know. You can try
 On my laptop, it looks like this:
 
 <img width="667" alt="Screen Shot 2023-01-14 at 7 51 09 PM" src="https://user-images.githubusercontent.com/68934498/212522038-e177b289-a990-42aa-881b-ffa7a92f2bda.png">
+
+> Example of using basic commands on terminal
 
 
 And that's all the basics! Remember to reach out to your professor or TA's if you need any help. 
