@@ -1,5 +1,11 @@
 # Week 1 Lab Report
 
+Name: Harsh Gurnani
+
+PID: A17342880
+
+Email: hgurnani@ucsd.edu
+
 This guide contains instructions for UCSD students to log into a course specific account on ieng6. Students can use Visual Code Studio, a code editor, to connect to the server remotely and run commands. The tutorial will dive into all the details of how to do so. 
 
 In this guide, we will cover three main points: 
