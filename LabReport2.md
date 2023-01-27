@@ -168,7 +168,7 @@ The method is clearly buggy, as the replacing line `arr[i] = arr[arr.length - i 
 
 ```
 @Test
-  public void testReverseInPlace() {
+    public void testReverseInPlace() {
     int[] input = {1, 2, 3, 4, 5};
     ArrayExamples.reverseInPlace(input);
     assertArrayEquals(new int[]{5, 4, 3, 2, 1}, input);
@@ -184,7 +184,7 @@ Still, some tests can pass even with the buggy code, such as when we have just o
 
 ```
 @Test 
-	public void testReverseInPlace() {
+    public void testReverseInPlace() {
     int[] input = {5};
     ArrayExamples.reverseInPlace(input);
     assertArrayEquals(new int[]{5}, input);
@@ -221,3 +221,5 @@ Both tests pass following the change. Now, we only traverse through half the arr
 * Since we have now passed through half the length, we stop traversing, giving us the right answer.
 
 ## Part 3: Something I Learned
+
+One of the most useful things I learned during lab in weeks 2 and 3 was how to debug code efficiently. Prior to the lab, I had almost no experience with JUnit, apart from a little bit of testing I did for my programming assignment in CSE 12. The lab in week 3 taught me how to use the JUnit framework properly, and helped me track down bugs in my code. For example, for the LinkedListExample, I created new tests for all the methods that showed me bugs in the append() and first() functions, and I was able to fix them by moving the line `n.next = new Node(value, null);` outside of the while loop, and throwing an Exception if the root was null, respectively. In addition, by going through so many examples, I even got better at reading through code and figuring out which parts will not function as expected. 
