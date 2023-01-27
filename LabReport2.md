@@ -153,3 +153,71 @@ The program is able to convert an integer to a String, allowing for a wide range
 
 
 ## Part 2: Bugs
+
+In Lab 3, we saw a lot of programs, such as with ArrayLists, LinkedLists, and files, that each had various bugs. An example of this buggy code can be found in the reverseInPlace metehod in the ArrayExamples.java file. The original code, taken from the lab3 repo on GitHub by the CSE15L tutors, is as follows:
+
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+
+The method is clearly buggy, as the replacing line `arr[i] = arr[arr.length - i - 1];` does not work properly. A good JUnit test reveals this issue. For example, we can test the method on an array consisting of integers from 1 to 5, in order. 
+
+```
+@Test
+  public void testReverseInPlace() {
+    int[] input = {1, 2, 3, 4, 5};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[]{5, 4, 3, 2, 1}, input);
+  }
+```
+
+<img width="413" alt="Screenshot 2023-01-27 at 11 22 45 AM" src="https://user-images.githubusercontent.com/68934498/215179027-47b4502f-9fb3-4c84-a990-042f3fd2c197.png">
+
+> Failed test
+
+
+Still, some tests can pass even with the buggy code, such as when we have just one element in the array.
+
+```
+@Test 
+	public void testReverseInPlace() {
+    int[] input = {5};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[]{5}, input);
+	}
+```
+
+<img width="394" alt="Screenshot 2023-01-27 at 11 24 50 AM" src="https://user-images.githubusercontent.com/68934498/215179352-881fdc45-c042-4461-9c1f-c83d38535a7a.png">
+
+> Test passed even though codee is buggy.
+
+In the first test, we can see that the third element is expected to be a 2, but the tester found a 4. This is because the line `arr[i] = arr[arr.length - i - 1];` works until half of the array, but doesn't change the value of the remaining indices. Let's analyze this with the array {1, 2, 3, 4, 5}
+
+* From index 0 to 2 (inclusive), the method sets the *i'th* index to the value of the *5-i'th* number. So, we end up with {5, 4, 3, 4, 5}
+* For the remaining two elements, it continues to do the same thing. However, since the first two elements are now 5 and 4, we end up with no change.
+* The resulting array is {5, 4, 3, 4, 5} rather than {5, 4, 3, 2, 1}.
+
+To fix this code, we can write it as follows:
+
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  }
+```
+
+Both tests pass following the change. Now, we only traverse through half the array, and for each element we pass through, we switch it with the elements in the back. 
+
+* We start with the array {1, 2, 3, 4, 5}
+* In the first pass through, temp is set to 1. The first element then becomes 5, and finally the last element becomes temp, or 1. The array is {5, 2, 3, 4, 1}
+* Something similar happens in the next pass, and the array at this point is {5, 4, 3, 2, 1}
+* Since we have now passed through half the length, we stop traversing, giving us the right answer.
+
+## Part 3: Something I Learned
