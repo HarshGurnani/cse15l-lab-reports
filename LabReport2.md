@@ -180,7 +180,7 @@ The method is clearly buggy, as the replacing line `arr[i] = arr[arr.length - i 
 > Failed test
 
 
-Still, some tests can pass even with the buggy code, such as when we have just one element in the array.
+Still, some tests can pass even with the buggy code, such as when we have just one element in the array. The reason is that even with the buggy code, the reversed version is what it should be (just 5 in this case). In fact, for any array that is a palindrome, the method would work fine (such as {3, 2, 1, 2, 3}).
 
 ```
 @Test 
