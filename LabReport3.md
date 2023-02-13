@@ -44,8 +44,8 @@ written_2/travel_guides/berlitz2/Amsterdam-History.txt:To counter
 As visible, there is a LOT of text involved that we don't care much about. Instead, we can just use the -l option to just print file names.
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History.txt
-written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History
+.txt written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
 
 written_2/travel_guides/berlitz2/Amsterdam-History.txt
 written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
@@ -124,8 +124,8 @@ Paseo de Almería was built during the 16th century, when Barbary pirates were t
 We can try something similar, but this time by passing in multiple words to search for. In this case, we search for both the words "moor" and "ranches", first passing in a capital version of the latter. 
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-History.txt
-written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-
+History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 
 written_2/travel_guides/berlitz1/WhatToMallorca.txt
 ```
@@ -133,8 +133,8 @@ written_2/travel_guides/berlitz1/WhatToMallorca.txt
 > Only shows one file when searching for "moor" and "Ranches"
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l -i "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-History.txt 
-written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l -i "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-
+History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 
 written_2/travel_guides/berlitz2/Barcelona-History.txt
 written_2/travel_guides/berlitz1/WhatToMallorca.txt
