@@ -26,15 +26,17 @@ Let's try searching for the string "Amsterdam" in two files.
 grep "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History.txt 
 written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
 
-written_2/travel_guides/berlitz2/Amsterdam-History.txt:Spanish rule was ruthless but, for a while, Amsterdam was left 
-alone. Its position as an important trading post kept it apart from the more barbarous behavior in other areas. It saw 
-a threefold increase in its population as refugees flooded in from other parts of the empire. Diamond polishers from 
-Antwerp and Jews from Portugal brought their influences to the city.
-written_2/travel_guides/berlitz2/Amsterdam-History.txt:Amsterdam was already developing a reputation of tolerance as 
-these new and disparate groups settled into the city. At the same time, Martin Luther’s new Christian doctrine, 
-Protestantism, was spreading like wildfire across Europe. It took a firm foothold in the northern provinces of the 
-Low Countries — with Amsterdam at its heart. It was at this time that Huguenots (French Protestants) came to Amsterdam 
-to flee persecution in their own country.
+written_2/travel_guides/berlitz2/Amsterdam-History.txt:Spanish rule was ruthless but, 
+for a while, Amsterdam was left alone. Its position as an important trading post kept 
+it apart from the more barbarous behavior in other areas. It saw a threefold increase 
+in its population as refugees flooded in from other parts of the empire. Diamond 
+polishers from Antwerp and Jews from Portugal brought their influences to the city.
+written_2/travel_guides/berlitz2/Amsterdam-History.txt:Amsterdam was already developing 
+a reputation of tolerance as these new and disparate groups settled into the city. At 
+the same time, Martin Luther’s new Christian doctrine, Protestantism, was spreading 
+like wildfire across Europe. It took a firm foothold in the northern provinces of the 
+Low Countries — with Amsterdam at its heart. It was at this time that Huguenots (French 
+Protestants) came to Amsterdam to flee persecution in their own country.
 written_2/travel_guides/berlitz2/Amsterdam-History.txt:To counter
 ...
 ...
@@ -44,7 +46,8 @@ written_2/travel_guides/berlitz2/Amsterdam-History.txt:To counter
 As visible, there is a LOT of text involved that we don't care much about. Instead, we can just use the -l option to just print file names.
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "Amsterdam" 
+written_2/travel_guides/berlitz2/Amsterdam-History
 .txt written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
 
 written_2/travel_guides/berlitz2/Amsterdam-History.txt
@@ -84,21 +87,25 @@ Originally, grep searches for a string that is case specific, as we can see from
 Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
 written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 
-written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive 
-Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the 
-crenellated ocher outer walls and a section of the turreted ramparts stand firm, providing wide-ranging vistas 
-over the city and the sea. And the forbidding, fortified cathedral that stands just inland from the waterfront 
-Paseo de Almería was built during the 16th century, when Barbary pirates were terrorizing the coast (see page 18).
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. 
+Abd-er-Rahman III’s massive Alcazaba looms large on the hilltop above the city. 
+Although an earthquake caused extensive damage in 1522, the crenellated ocher outer 
+walls and a section of the turreted ramparts stand firm, providing wide-ranging 
+vistas over the city and the sea. And the forbidding, fortified cathedral that stands 
+just inland from the waterfront Paseo de Almería was built during the 16th century, 
+when Barbary pirates were terrorizing the coast (see page 18).
 ```
 
 > Only searches for "vista" with lower-case v
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "Vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "Vista" 
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
 written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 
-written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole city and the North Saskatchewan 
-River on your way home, stop off at Vista 33, the observation level of the telephone building.
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole 
+city and the North Saskatchewan River on your way home, stop off at Vista 33, the 
+observation level of the telephone building.
 ```
 
 > Only searches for "vista" with upper-case v
@@ -106,17 +113,21 @@ River on your way home, stop off at Vista 33, the observation level of the telep
 With the -i option, we can make grep search for a certain string without being particular about case. If we ran the previous command with -i, the output would be the combination of searching for both "vista" and "Vista"
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -i "vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -i "vista" 
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
 written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 
-written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole city and the North Saskatchewan 
-River on your way home, stop off at Vista 33, the observation level of the telephone building.
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole 
+city and the North Saskatchewan River on your way home, stop off at Vista 33, the 
+observation level of the telephone building.
 
-written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive 
-Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the 
-crenellated ocher outer walls and a section of the turreted ramparts stand firm, providing wide-ranging vistas 
-over the city and the sea. And the forbidding, fortified cathedral that stands just inland from the waterfront 
-Paseo de Almería was built during the 16th century, when Barbary pirates were terrorizing the coast (see page 18).
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. 
+Abd-er-Rahman III’s massive Alcazaba looms large on the hilltop above the city. 
+Although an earthquake caused extensive damage in 1522, the crenellated ocher outer 
+walls and a section of the turreted ramparts stand firm, providing wide-ranging 
+vistas over the city and the sea. And the forbidding, fortified cathedral that stands 
+just inland from the waterfront Paseo de Almería was built during the 16th century, 
+when Barbary pirates were terrorizing the coast (see page 18).
 ```
 
 ### Example 2
@@ -124,8 +135,10 @@ Paseo de Almería was built during the 16th century, when Barbary pirates were t
 We can try something similar, but this time by passing in multiple words to search for. In this case, we search for both the words "moor" and "ranches", first passing in a capital version of the latter. 
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-
-History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "moor\|Ranches" 
+written_2/travel_guides/berlitz2/Barcelona-
+History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt 
+written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 
 written_2/travel_guides/berlitz1/WhatToMallorca.txt
 ```
@@ -133,8 +146,10 @@ written_2/travel_guides/berlitz1/WhatToMallorca.txt
 > Only shows one file when searching for "moor" and "Ranches"
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l -i "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-
-History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l -i "moor\|Ranches" 
+written_2/travel_guides/berlitz2/Barcelona-
+History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt 
+written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 
 written_2/travel_guides/berlitz2/Barcelona-History.txt
 written_2/travel_guides/berlitz1/WhatToMallorca.txt
@@ -271,17 +286,19 @@ Curently, grep searches for a string in a file by finding any valid expression t
 ### Example 1
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "John" written_2//non-fiction/OUP/Castro/chB.txt 
-written_2//non-fiction/OUP/Castro/chV.txt written_2//non-fiction/OUP/Castro/chM.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "John" written_2//non-fiction/
+OUP/Castro/chB.txt written_2//non-fiction/OUP/Castro/chV.txt written_2//
+non-fiction/OUP/Castro/chM.txt
 
 written_2//non-fiction/OUP/Castro/chB.txt:Bourke, Captain John Gregory (1846–1896)
 written_2//non-fiction/OUP/Castro/chB.txt:Luke, Mark, John and Matthew
-written_2//non-fiction/OUP/Castro/chV.txt:References Alarcon 1989; Brundage 1979; Demarest and Taylor 1956; 
-Elizondo 1957; -Johnston...
-written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published versions of the Joaquín Murrieta 
-legend. The first and for many years the one considered most -authentic was by John ...
-written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces the history of the legend, claiming all 
-the information came from the John Rollin Ridge ...
+written_2//non-fiction/OUP/Castro/chV.txt:References Alarcon 1989; Brundage 1979; 
+Demarest and Taylor 1956; Elizondo 1957; -Johnston...
+written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published 
+versions of the Joaquín Murrieta legend. The first and for many years the one 
+considered most -authentic was by John ...
+written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces the 
+history of the legend, claiming all the information came from the John Rollin Ridge ...
 ```
 
 > Searching for "John" in three files
@@ -289,15 +306,17 @@ the information came from the John Rollin Ridge ...
 We can see that in file `chV.txt`, the word John is actually found in the name Johnston. To find the files with just the word "John" and no variation that simply contains that string, we use -w.
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -w "John" written_2//non-fiction/OUP/Castro/chB.txt 
-written_2//non-fiction/OUP/Castro/chV.txt written_2//non-fiction/OUP/Castro/chM.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -w "John" written_2//non-fiction/OUP
+/Castro/chB.txt written_2//non-fiction/OUP/Castro/chV.txt written_2//non-fiction/OUP/
+Castro/chM.txt
 
 written_2//non-fiction/OUP/Castro/chB.txt:Bourke, Captain John Gregory (1846–1896)
 written_2//non-fiction/OUP/Castro/chB.txt:Luke, Mark, John and Matthew
-written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published versions of the Joaquín Murrieta 
-legend. The first and for many years the one considered most -authentic was by John ...
-written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces the history of the legend, claiming all 
-the information came from the John Rollin Ridge ...
+written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published 
+versions of the Joaquín Murrieta legend. The first and for many years the one 
+considered most -authentic was by John ...
+written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces the 
+history of the legend, claiming all the information came from the John Rollin Ridge ...
 ```
 
 > Only returns the results that contain the exact word "John"
@@ -307,8 +326,10 @@ the information came from the John Rollin Ridge ...
 A more visible example of this is when we put the results of grep into a file and look at the word count of each file. 
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -rl "social" written_2 > social-count.txt
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -rlw "social" written_2 > social-w-count.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -rl "social" written_2 > social-
+count.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -rlw "social" written_2 > social-
+w-count.txt
 Neelams-MacBook-Pro:docsearch neelamgurnani$ wc social-count.txt
       94      94    4708 social-count.txt
 Neelams-MacBook-Pro:docsearch neelamgurnani$ wc social-w-count.txt
