@@ -81,7 +81,8 @@ Originally, grep searches for a string that is case specific, as we can see from
 ### Example 1
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 
 written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive 
 Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the 
@@ -111,7 +112,11 @@ written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole city and the North Saskatchewan 
 River on your way home, stop off at Vista 33, the observation level of the telephone building.
 
-written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the crenellated ocher outer walls and a section of the turreted ramparts stand firm, providing wide-ranging vistas over the city and the sea. And the forbidding, fortified cathedral that stands just inland from the waterfront Paseo de Almería was built during the 16th century, when Barbary pirates were terrorizing the coast (see page 18).
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive 
+Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the 
+crenellated ocher outer walls and a section of the turreted ramparts stand firm, providing wide-ranging vistas 
+over the city and the sea. And the forbidding, fortified cathedral that stands just inland from the waterfront 
+Paseo de Almería was built during the 16th century, when Barbary pirates were terrorizing the coast (see page 18).
 ```
 
 ### Example 2
@@ -119,7 +124,8 @@ written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major si
 We can try something similar, but this time by passing in multiple words to search for. In this case, we search for both the words "moor" and "ranches", first passing in a capital version of the latter. 
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-History.txt
+written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 
 written_2/travel_guides/berlitz1/WhatToMallorca.txt
 ```
@@ -127,7 +133,8 @@ written_2/travel_guides/berlitz1/WhatToMallorca.txt
 > Only shows one file when searching for "moor" and "Ranches"
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l -i "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-History.txt written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l -i "moor\|Ranches" written_2/travel_guides/berlitz2/Barcelona-History.txt 
+written_2/travel_guides/berlitz1/WhatToMallorca.txt written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 
 written_2/travel_guides/berlitz2/Barcelona-History.txt
 written_2/travel_guides/berlitz1/WhatToMallorca.txt
