@@ -271,12 +271,13 @@ Curently, grep searches for a string in a file by finding any valid expression t
 ### Example 1
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "John" written_2//non-fiction/OUP/Castro/chB.txt written_2//non-fiction/OUP/Castro/chV.txt written_2//non-fiction/OUP/Castro/chM.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "John" written_2//non-fiction/OUP/Castro/chB.txt 
+written_2//non-fiction/OUP/Castro/chV.txt written_2//non-fiction/OUP/Castro/chM.txt
 
 written_2//non-fiction/OUP/Castro/chB.txt:Bourke, Captain John Gregory (1846–1896)
 written_2//non-fiction/OUP/Castro/chB.txt:Luke, Mark, John and Matthew
-written_2//non-fiction/OUP/Castro/chV.txt:References Alarcon 1989; Brundage 1979; Demarest and Taylor 1956; Elizondo 1977; -Johnston ...
-written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published versions of the Joaquín Murrieta legend. ...
+written_2//non-fiction/OUP/Castro/chV.txt:References Alarcon 1989; Brundage 1979; Demarest and Taylor 1956; Elizondo ...
+written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published versions of the Joaquín Murrieta ...
 written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces the history of the legend, claiming all ...
 ```
 
@@ -285,12 +286,15 @@ written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces t
 We can see that in file `chV.txt`, the word John is actually found in the name Johnston. To find the files with just the word "John" and no variation that simply contains that string, we use -w.
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -w "John" written_2//non-fiction/OUP/Castro/chB.txt written_2//non-fiction/OUP/Castro/chV.txt written_2//non-fiction/OUP/Castro/chM.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -w "John" written_2//non-fiction/OUP/Castro/chB.txt 
+written_2//non-fiction/OUP/Castro/chV.txt written_2//non-fiction/OUP/Castro/chM.txt
 
 written_2//non-fiction/OUP/Castro/chB.txt:Bourke, Captain John Gregory (1846–1896)
 written_2//non-fiction/OUP/Castro/chB.txt:Luke, Mark, John and Matthew
-written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published versions of the Joaquín Murrieta legend. The first and for many years the one considered most -authentic was by John ...
-written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces the history of the legend, claiming all the information came from the John Rollin Ridge ...
+written_2//non-fiction/OUP/Castro/chM.txt:There have been over twenty-one published versions of the Joaquín Murrieta 
+legend. The first and for many years the one considered most -authentic was by John ...
+written_2//non-fiction/OUP/Castro/chM.txt:Joseph Henry Jackson’s work traces the history of the legend, claiming all 
+the information came from the John Rollin Ridge ...
 ```
 
 > Only returns the results that contain the exact word "John"
