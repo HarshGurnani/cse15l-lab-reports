@@ -23,10 +23,18 @@ Grep normally prints out both the file name and some contents of the file, which
 Let's try searching for the string "Amsterdam" in two files.
 
 ```
-grep "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History.txt written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
+grep "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History.txt 
+written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
 
-written_2/travel_guides/berlitz2/Amsterdam-History.txt:Spanish rule was ruthless but, for a while, Amsterdam was left alone. Its position as an important trading post kept it apart from the more barbarous behavior in other areas. It saw a threefold increase in its population as refugees flooded in from other parts of the empire. Diamond polishers from Antwerp and Jews from Portugal brought their influences to the city.
-written_2/travel_guides/berlitz2/Amsterdam-History.txt:Amsterdam was already developing a reputation of tolerance as these new and disparate groups settled into the city. At the same time, Martin Luther’s new Christian doctrine, Protestantism, was spreading like wildfire across Europe. It took a firm foothold in the northern provinces of the Low Countries — with Amsterdam at its heart. It was at this time that Huguenots (French Protestants) came to Amsterdam to flee persecution in their own country.
+written_2/travel_guides/berlitz2/Amsterdam-History.txt:Spanish rule was ruthless but, for a while, Amsterdam was left 
+alone. Its position as an important trading post kept it apart from the more barbarous behavior in other areas. It saw 
+a threefold increase in its population as refugees flooded in from other parts of the empire. Diamond polishers from 
+Antwerp and Jews from Portugal brought their influences to the city.
+written_2/travel_guides/berlitz2/Amsterdam-History.txt:Amsterdam was already developing a reputation of tolerance as 
+these new and disparate groups settled into the city. At the same time, Martin Luther’s new Christian doctrine, 
+Protestantism, was spreading like wildfire across Europe. It took a firm foothold in the northern provinces of the 
+Low Countries — with Amsterdam at its heart. It was at this time that Huguenots (French Protestants) came to Amsterdam 
+to flee persecution in their own country.
 written_2/travel_guides/berlitz2/Amsterdam-History.txt:To counter
 ...
 ...
@@ -36,7 +44,8 @@ written_2/travel_guides/berlitz2/Amsterdam-History.txt:To counter
 As visible, there is a LOT of text involved that we don't care much about. Instead, we can just use the -l option to just print file names.
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History.txt written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -l "Amsterdam" written_2/travel_guides/berlitz2/Amsterdam-History.txt
+written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
 
 written_2/travel_guides/berlitz2/Amsterdam-History.txt
 written_2/travel_guides/berlitz2/Amsterdam-Intro.txt
@@ -74,15 +83,21 @@ Originally, grep searches for a string that is case specific, as we can see from
 ```
 Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 
-written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the crenellated ocher outer walls and a section of the turreted ramparts stand firm, providing wide-ranging vistas over the city and the sea. And the forbidding, fortified cathedral that stands just inland from the waterfront Paseo de Almería was built during the 16th century, when Barbary pirates were terrorizing the coast (see page 18).
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive 
+Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the 
+crenellated ocher outer walls and a section of the turreted ramparts stand firm, providing wide-ranging vistas 
+over the city and the sea. And the forbidding, fortified cathedral that stands just inland from the waterfront 
+Paseo de Almería was built during the 16th century, when Barbary pirates were terrorizing the coast (see page 18).
 ```
 
 > Only searches for "vista" with lower-case v
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "Vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep "Vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 
-written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole city and the North Saskatchewan River on your way home, stop off at Vista 33, the observation level of the telephone building.
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole city and the North Saskatchewan 
+River on your way home, stop off at Vista 33, the observation level of the telephone building.
 ```
 
 > Only searches for "vista" with upper-case v
@@ -90,9 +105,11 @@ written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the 
 With the -i option, we can make grep search for a certain string without being particular about case. If we ran the previous command with -i, the output would be the combination of searching for both "vista" and "Vista"
 
 ```
-Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -i "vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
+Neelams-MacBook-Pro:docsearch neelamgurnani$ grep -i "vista" written_2/travel_guides/berlitz2/Canada-WhereToGo.txt 
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
 
-written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole city and the North Saskatchewan River on your way home, stop off at Vista 33, the observation level of the telephone building.
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:If you want a view of the whole city and the North Saskatchewan 
+River on your way home, stop off at Vista 33, the observation level of the telephone building.
 
 written_2/travel_guides/berlitz2/Costa-WhereToGo.txt:There are only two major sights. Abd-er-Rahman III’s massive Alcazaba looms large on the hilltop above the city. Although an earthquake caused extensive damage in 1522, the crenellated ocher outer walls and a section of the turreted ramparts stand firm, providing wide-ranging vistas over the city and the sea. And the forbidding, fortified cathedral that stands just inland from the waterfront Paseo de Almería was built during the 16th century, when Barbary pirates were terrorizing the coast (see page 18).
 ```
