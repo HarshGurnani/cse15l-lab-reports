@@ -31,7 +31,7 @@ Students must `ssh` into their respective ieng6 accounts. In my case, I ran the 
 
 *Task: Clone your fork of the repository from your Github account*
 
-Prior to the timed portion of the competition, I created a new fork of the lab 7 repository and titled it 'Lab7New'. To clone the repository from Github, we use the `git clone` command. During lab, we set up SSH keys in ieng6 to connect to Github, meaning we can now use the SSH URL method of cloning repositories. 
+Prior to the timed portion of the competition, I created a new fork of the lab 7 repository and titled it "Lab7New". To clone the repository from Github, we use the `git clone` command. During lab, we set up SSH keys in ieng6 to connect to Github, meaning we can now use the SSH URL method of cloning repositories. 
 
 <img width="397" alt="Screenshot 2023-02-25 at 5 27 38 PM" src="https://user-images.githubusercontent.com/68934498/221387340-c118918e-f24c-41f8-9dbe-1184512b1536.png">
 
@@ -48,9 +48,9 @@ In my terminal, I used the command `git clone git@github.com:ucsd-cse15l-w23/lab
 
 *Task: Run the tests, demonstrating that they fail*
 
-After the previous step, I needed to enter the recently cloned directory. To do so, I used `ls <enter>' to see the available directories, and then 'cd lab7New <enter>' to actually enter the required directory.
+After the previous step, I needed to enter the recently cloned directory. To do so, I used `ls <enter>` to see the available directories, and then `cd lab7New <enter>` to actually enter the required directory.
 
-Doing 'ls <enter>' once inside, we can see the available files, two of them being `ListExamples.java` and `ListExamplesTests.java`. To run the tests, I first went to [Week 3 CSE 15L website](https://ucsd-cse15l-w23.github.io/week/week3/#setup) and copy pasted the jar commands from the Set Up section (keys pressed were `<command + c>` to copy and `<command + v>` to paste). For each command, I hit `<enter>` to run them. Note that for the command to actually run the tests (not the compilation), I hit `<delete>` multiple times to get rid of the file name, and added `ListExamplesTests` at the end.
+Doing `ls <enter>` once inside, we can see the available files, two of them being `ListExamples.java` and `ListExamplesTests.java`. To run the tests, I first went to [Week 3 CSE 15L website](https://ucsd-cse15l-w23.github.io/week/week3/#setup) and copy pasted the jar commands from the Set Up section (keys pressed were `<command + c>` to copy and `<command + v>` to paste). For each command, I hit `<enter>` to run them. Note that for the command to actually run the tests (not the compilation), I hit `<delete>` multiple times to get rid of the file name, and added `ListExamplesTests` at the end.
   
 From the JUnit output, it is obvious that the tests failed. There were 2 tests total, and one of them failed.
 
