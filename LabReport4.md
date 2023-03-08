@@ -20,7 +20,7 @@ In this lab report, I will be reproducing all the tasks from the class competiti
 
 To log into ieng6, we must use the `ssh` command, which is used to log into a remote server. Since the terminal had no history, I could not use the `<up>` key to retrieve a previous command. 
 
-Students must `ssh` into their respective ieng6 accounts. In my case, I ran the command `ssh cs15lwi23apq@ieng6.ucsd.edu <enter>`, with cs15lwi23apq being my CSE 15L course specific account. Since we set up an SSH key for ieng6 in lab, I did not have to enter my password.  
+Students must `ssh` into their respective ieng6 accounts. In my case, I ran the command `ssh cs15lwi23apq@ieng6.ucsd.edu <enter>`, with "cs15lwi23apq" being my CSE 15L course specific account. Since we set up an SSH key for ieng6 in lab, I did not have to enter my password.  
 
 <img width="647" alt="Screenshot 2023-02-25 at 5 13 15 PM" src="https://user-images.githubusercontent.com/68934498/221386978-1d8d119c-14ef-4fb9-8d72-c8cc052d363e.png">
 
@@ -69,7 +69,7 @@ Once again reading the JUnit output, we see that the error is in `merge` in List
 
 > The nano text editing environment
   
-We can hit the `<down>` key multiple times to go to the the merge method. Alternatively, we can also use `<ctrl w>` and search for the text "merge". I chose to do the latter and hit <enter> after typing "merge". 
+We can hit the `<down>` key multiple times to go to the the merge method. Alternatively, we can also use `<ctrl w>` and search for the text "merge". I chose to do the latter and hit `<enter>` after typing "merge". 
   
 <img width="695" alt="Screenshot 2023-02-25 at 5 55 43 PM" src="https://user-images.githubusercontent.com/68934498/221388083-65ff683f-4f4d-4b7d-9e0b-d99ee4974ef0.png">
 
@@ -87,7 +87,7 @@ Finally, to save and exit the text file, we use `<ctrl + o>` to save, `<enter>` 
   
 *Task: Run the tests, demonstrating that they now succeed*
   
-Now that we have some history in our terminal, we can use the `<up>` button to go to the necessary command. Since I used `ls <enter>` in between to ensure that all the necessary .class files were present, I hit `<up` 4 times to get to the jar command used to compile all the java files, and hit `<enter>`. Then, I hit `<up>` 3 times to reach the second command, and once again hit `<enter>` to run the tests.
+Now that we have some history in our terminal, we can use the `<up>` button to go to the necessary command. Since I used `ls <enter>` in between to ensure that all the necessary .class files were present, I hit `<up` 4 times to get to the jar command used to compile all the java files,  `<enter>`. Then, I hit `<up>` 3 times to reach the second command, and once again hit `<enter>` to run the tests.
   
 <img width="696" alt="Screenshot 2023-02-25 at 6 06 01 PM" src="https://user-images.githubusercontent.com/68934498/221388332-939569e9-2fbc-426e-9b66-56c3f9337d88.png">
 
