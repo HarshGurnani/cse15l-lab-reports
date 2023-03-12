@@ -196,7 +196,7 @@ The POST route is used to add a new User object to the database. We can call thi
 /POST?u=<name>
 ```
 
-In the place of `<name>`, we would include the name of the object we are trying to create. The integer ID, declared at the top of the class, is used as the user's ID. Then, ID is incremented by a random amount between 1 and 45 so that a new ID can be used for the next user. 
+In the place of `<name>`, we would include the name of the object we are trying to create. The integer ID, declared at the top of the class, is used as the user's ID. Then, ID is incremented by a random amount between 1 and 45 so that a new ID can be used for the next user. If a name is not passed in, an error message saying "Insufficient Arguments" is printed to the screen.
 
 <img width="319" alt="LabReport5_1" src="https://user-images.githubusercontent.com/68934498/224521796-92234bd3-5108-4964-8aa3-ec57ef2cdad8.png">
 
@@ -218,7 +218,7 @@ The GET route is used to search for a User object. It can be accessed with a que
 /GET?u=<name>
 ```
 
-We search the user objects with a name, rather than an ID. This is analogous to a real database search where most people would not know individual user's ID's, but instead would want to search by name. If the user is not found, an error message is printed to the screen.
+We search the user objects with a name, rather than an ID. This is analogous to a real database search where most people would not know individual user's ID's, but instead would want to search by name. If the user is not found, an error message is printed to the screen. If a name is not passed in, an error message saying "Insufficient Arguments" is printed to the screen.
 
  <img width="373" alt="LabReport5_4" src="https://user-images.githubusercontent.com/68934498/224521937-25c494f5-de7d-40f6-b462-63e4f621f000.png">
 
@@ -238,7 +238,7 @@ The PATCH route uses the following query:
 /PATCH?u=<name_to_search>=<name_to_replace>
 ```
 
-Unconventially, the route uses two equal signs, in order to separate the name we are searching for and the name we want to replace it with. This solution works as a URL, but in an actual application we could implement it differently so it shows up nicely in a graphical user interface.
+Unconventially, the route uses two equal signs, in order to separate the name we are searching for and the name we want to replace it with. This solution works as a URL, but in an actual application we could implement it differently so it shows up nicely in a graphical user interface. If two names are not passed in, an error message saying "Insufficient Arguments" is printed to the screen.
 
 <img width="284" alt="LabReport5_6" src="https://user-images.githubusercontent.com/68934498/224522070-3d051bf0-6ff0-4aec-9ee2-93c9ab6ca9a2.png">
 
