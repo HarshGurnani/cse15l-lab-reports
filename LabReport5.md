@@ -252,3 +252,22 @@ Unconventially, the route uses two equal signs, in order to separate the name we
 
 > The updated database. As visible, where we previously saw the name "Vinayak", we now see the name "Shray"
 
+## Part 4: Reflection
+
+The "database" implemented above is very primitive, but is actually analogous to many real life applications. Since Lab Report 2, I've learned a lot more about full stack development and wanted to implement some of the things I learned using the server. Importantly, many applications use GET, POST, and PATCH routes to connect their frontends to the backend. For example, we may use GET to receive a user's name and age from the backend and then display it on the frontend. Alternatively, PATCH may be used to send an updated message from the UI to the database if the user decides to update their personal pronouns. 
+
+In addition, I was able to utilize some Java tools that I picked up. Firstly, I used a HashMap for the database, as shown in the code 
+
+```
+HashMap<Integer, User> users = new HashMap<>();
+```
+
+A HashMap is a data structure that uses hashing to map a key to a value. It is an extremely useful tool, especially since insertion and retrival occur in O(1) time, meaning that it is very efficient. Furthermore, I updated the ID with the `Random()` package in java.
+
+```
+ID += new Random().nextInt(45);
+```
+
+This way, we would not just end up with consecutive ID numbers between students. 
+
+Overall, the server implementation was one of my favorite tasks in CSE 15L, and I wanted to implement it in a different way than we did before in order to show how many potential applications it has. While I used much of the same code as the first time around, I really enjoyed creating the different routes that matched what backend routes are like in real world development. 
