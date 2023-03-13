@@ -89,7 +89,8 @@ public class Server {
         server.createContext("/", new ServerHttpHandler(handler));
 
         server.start();
-        System.out.println("Server Started! Visit http://localhost:" + port + " to visit.");
+        System.out.println("Server Started! Visit http://localhost:" + port + 
+                            " to visit.");
     }
 }
 
@@ -107,7 +108,8 @@ import java.util.*;
 public class UserServer {
     public static void main(String[] args) throws IOException {
         if (args.length == 0) {
-            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            System.out.println("Missing port number! Try any number between " 
+                                + " 1024 to 49151");
             return;
         }
 
@@ -128,7 +130,9 @@ class Handler implements URLHandler {
             } else {
                 String representation = "";
                 for (Integer i: users.keySet()) {
-                    String toAdd = "(ID: " + i + ", Name: " + users.get(i).getName() + ") \n";
+                    String toAdd = "(ID: " + i + ", Name: " + 
+                                     users.get(i).getName() + 
+                                     ") \n";
                     representation += toAdd;
                 }
                 return representation;
@@ -140,7 +144,8 @@ class Handler implements URLHandler {
                     User newUser = new User(ID, parameters[1]);
                     users.put(ID, newUser);
                     ID += new Random().nextInt(45);
-                    return "Added user with name " + parameters[1] + " to database.";
+                    return "Added user with name " + parameters[1] + 
+                            " to database.";
                 } else {
                     return "Invalid query";
                 }
@@ -152,7 +157,8 @@ class Handler implements URLHandler {
                 if (parameters[0].equals("u")) {
                     for (Integer i: users.keySet()) {
                         if (users.get(i).getName().equals(parameters[1])) {
-                            return "(ID: " + i + ", Name: " + users.get(i).getName() + ")";
+                            return "(ID: " + i + ", Name: " + 
+                                    users.get(i).getName() + ")";
                         }
                     }
                     return "User not found";
